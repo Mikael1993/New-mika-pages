@@ -951,11 +951,11 @@ const buildWorkerLessConfig = async (env, client) => {
     const { remoteDNS, localDNS, lengthMin,  lengthMax,  intervalMin,  intervalMax, blockAds, bypassIran, blockPorn, bypassLAN } = proxySettings;  
     let fakeOutbound = structuredClone(xrayOutboundTemp);
     delete fakeOutbound.mux;
-    fakeOutbound.settings.vnext[0].address = 'google.com';
+    fakeOutbound.settings.vnext[0].address = 'yahoo.com';
     fakeOutbound.settings.vnext[0].users[0].id = userID;
     delete fakeOutbound.streamSettings.sockopt;
-    fakeOutbound.streamSettings.tlsSettings.serverName = 'google.com';
-    fakeOutbound.streamSettings.wsSettings.headers.Host = 'google.com';
+    fakeOutbound.streamSettings.tlsSettings.serverName = 'yahoo.com';
+    fakeOutbound.streamSettings.wsSettings.headers.Host = 'yahoo.com';
     fakeOutbound.streamSettings.wsSettings.path = '/';
     delete fakeOutbound.streamSettings.grpcSettings;
     delete fakeOutbound.streamSettings.tcpSettings;
